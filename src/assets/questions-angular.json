@@ -1,0 +1,74 @@
+[
+    {
+        "id" : "1",
+        "question" : "What is the command to create components in Angular?",
+        "options": [
+            {
+                "optid" : "a",
+                "opt" : "ng g c componentname"
+            },
+            {
+                "optid" : "b",
+                "opt" : "ng g d componentname"
+            },
+            {
+                "optid" : "c",
+                "opt" : "ng g g componentname"
+            },
+            {
+                "optid" : "d",
+                "opt" : "ng g s componentname"          
+            }
+        ],
+        "userRadioSelected" : "",
+        "answerKey" : "a"
+    },
+    {
+        "id" : "2",
+        "question" : "What is the command to create services in Angular?",
+        "options": [
+            {
+                "optid" : "a",
+                "opt" : "ng g d componentname"
+            },
+            {
+                "optid" : "b",
+                "opt" : "ng g ng componentname"
+            },
+            {
+                "optid" : "c",
+                "opt" : "ng g s componentname"
+            },
+            {
+                "optid" : "d",
+                "opt" : "ng g c componentname"
+            }
+        ],
+        "userRadioSelected" : "",
+        "answerKey" : "c"
+    },
+    {
+        "id" : "3",
+        "question" : "What is command used to start server in Angular?",
+        "options": [
+            {
+                "optid" : "a",
+                "opt" : "ng serve"
+            },
+            {
+                "optid" : "b",
+                "opt" : "ng start"             
+            },
+            {
+                "optid" : "c",
+                "opt" : "ng open"
+            },
+            {
+                "optid" : "d",
+                "opt" : "ng begin"
+            }
+        ],
+        "userRadioSelected" : "",
+        "answerKey" : "a"
+    }
+]

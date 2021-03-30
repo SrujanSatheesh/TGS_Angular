@@ -1,0 +1,47 @@
+<form #onlinetestForm="ngForm">
+    <div style="margin-bottom: 20x;margin-top: 20px;">
+        <div id="wrapper">
+            <div id="c1"><span><strong>Correct</strong></span></div>
+            <div id="c2"><span><strong>Incorrect</strong></span></div>
+        </div>
+        <br>
+        <div style="margin: auto; width: 60%">
+            <ul class="list-group" *ngFor="let que of questionsList; let queindex = index">
+                <li class="list-group-item" style="background-color: #D1A652;">{{que.id}}. <strong>{{que.question}}</strong></li>
+                <li class="list-group-item" *ngFor="let option of que.options; let optionindex = index"
+                            [ngClass]="{
+                                        'green-border' : option.optid === que.answerKey, 
+                                        'red-border' : submittedAnswers[queindex] !== que.answerKey && submittedAnswers[queindex] === option.optid
+                                    }">
+    
+                       
+                
+                    <div class="radio" style="margin-left: 10px;">  
+                        <label> 
+                            <input type="radio"
+                                 name="{{que.id}}{{option.optid}}" 
+                                 value="{{option.optid}}"
+                                 disabled
+                                 >
+                            &nbsp;&nbsp;<em>{{option.opt}}</em>  
+                        </label>  
+                    </div>
+                  
+                </li>
+                <li class="no-bullets">
+                    <div style="height: 30px;">
+                      
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+        <button style="float: right; margin-right: 20px;margin-bottom: 50px;" class="btn btn-primary" (click)="goToHome()">Home</button>
+       
+
+    </div>
+    <div style="margin-top: 20x;">
+       
+    </div>
+</form>

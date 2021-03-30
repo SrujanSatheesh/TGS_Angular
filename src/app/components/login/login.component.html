@@ -1,0 +1,27 @@
+<body>
+<div class="text-center mt-4">
+    <form class="form-signin border rounded" style="background-color:#D1A653" [formGroup]="userForm" (ngSubmit)="signin($event)">
+
+   
+        <h1 class="h3 mb-3 font-weight-normal" style="color:white"><strong>Login</strong></h1>
+        
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input type="text" id="inputUsername" class="form-control mb-3" placeholder="Enter your username" formControlName="username" required autofocus>
+       
+    
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control mb-3" placeholder="Enter your Password" formControlName="password" required>
+        
+    
+        <div class="checkbox mb-3" style="color:white">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+
+        <button class="btn btn-block border rounded" 
+              style="color:white;background-color: #7ED153;" type="submit"><strong>Sign in</strong></button>
+        
+      </form>
+</div>
+</body>

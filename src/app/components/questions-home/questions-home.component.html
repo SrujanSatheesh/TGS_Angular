@@ -1,0 +1,42 @@
+<form (ngSubmit)="submitTest(onlinetestForm.value)" #onlinetestForm="ngForm">
+    <div style="margin-bottom: 20x;">
+        <div style="margin: 30px;text-align: center;">
+            <div><h4>Angular Test</h4></div>
+            <app-timer></app-timer>
+        </div>
+        <div style="margin: auto; width: 60%">
+            <ul class="list-group" *ngFor="let que of questionsList; let queindex = index">
+                <li class="list-group-item" style="background-color:#D1A652;">{{que.id}}. <strong>{{que.question}}</strong></li>
+                <li class="list-group-item" *ngFor="let option of que.options; let optionindex = index">
+                   
+                       
+                    
+                    <div class="radio" style="margin-left: 10px;">  
+                        <label> 
+                            <input type="radio" required
+                                 name="{{que.id}}{{option.optid}}" 
+                                 value="{{option.optid}}"             
+                                 [(ngModel)]="que.userRadioSelected"
+                                 >
+                            &nbsp;&nbsp;<em>{{option.opt}}</em>  
+                        </label>  
+
+
+                    </div>
+                  
+                </li>
+                <li class="no-bullets">
+                    <div style="height: 30px;">
+                       
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <input style="float: right; margin-right: 20px;margin-bottom: 50px;" class="btn btn-primary" 
+              [disabled]="onlinetestForm.form.invalid "type="submit" value="Submit"/>
+    </div>
+    <div style="margin-top: 20x;">
+       
+    </div>
+</form>
